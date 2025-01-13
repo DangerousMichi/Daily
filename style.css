@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+#buttonD {
+    width: 100%;
+}
+
+#main, #editor {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#notebooksContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+#cont {
+    width: 90%;
+    height: 90%;
+}
+
+#main {
+    margin-top: 50px;
+}
+
+#editor {
+    display: none;
+}
+
+/* Botón de añadir notebook */
+#addNotebook {
+    background-color: #4c8baf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#addNotebook:hover {
+    background-color: #5d738c;
+}
+
+/* Contenedor de notebooks */
+#notebooksContainer div {
+    width: 100px;
+    height: 130px;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#notebooksContainer div:hover {
+    filter: brightness(0.9);
+}
+
+/* Estilo del textarea */
+textarea {
+    max-width: 100%;
+    height: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/* Botones en el editor */
+#saveNotebook, #backToMain {
+    background-color: #667677;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#saveNotebook:hover, #backToMain:hover {
+    background-color: #6c7677;
+}
+
+/* Estilo de los selectores */
+input[type="color"] {
+    margin: 5px 0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
