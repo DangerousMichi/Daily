@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const noteContent = document.getElementById('noteContent');
     const backToMain = document.getElementById('backToMain');
     const saveNotebook = document.getElementById('saveNotebook');
+    const menuToggle = document.getElementById('menuToggle');
+    const menuContainer = document.getElementById('menuContainer');
 
     addNotebookButton.addEventListener('click', createNotebook);
     backToMain.addEventListener('click', () => {
@@ -15,16 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     saveNotebook.addEventListener('click', saveContent);
 
+    menuToggle.addEventListener('click', () => {
+        menuContainer.classList.toggle('active');
+    });
+
     function createNotebook() {
         const notebookName = prompt('Ingresa el nombre del Notebook:');
         if (notebookName) {
             const colorPicker = document.createElement('input');
             colorPicker.type = 'color';
-            colorPicker.value = '#b6ecff'; // Color predeterminado
+            colorPicker.value = document.getElementById('defaultColor').value;
 
             const fontColorPicker = document.createElement('input');
             fontColorPicker.type = 'color';
-            fontColorPicker.value = '#000000'; // Color de fuente predeterminado
+            fontColorPicker.value = document.getElementById('defaultFontColor').value;
             
             const notebook = document.createElement('div');
             notebook.textContent = notebookName;

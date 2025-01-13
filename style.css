@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'MAGICRETRO';
+    src: url('fonts/MAGICRETRO.TTF') format('woff'),
+         url('fonts/ALLERTASTENCIL-REGULAR.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'allerta';
+    src: url('fonts/LOZANGENONCOMMERCIAL.OTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
@@ -10,8 +24,12 @@ body {
     height: 100vh;
 }
 
-h1 {
+#titt {
     text-align: center;
+    font-family: 'MAGICRETRO';
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #buttonD {
@@ -41,7 +59,7 @@ h1 {
 }
 
 #main {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 #editor {
@@ -67,14 +85,13 @@ h1 {
 
 /* Contenedor de notebooks */
 #notebooksContainer div {
-    width: 100px;
     height: 130px;
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-align: center;
+    font-family: 'allerta';
     font-size: 18px;
     transition: background-color 0.3s ease;
 }
@@ -121,6 +138,49 @@ input[type="color"] {
     height: 40px;
     border: none;
     padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo para el contenedor del menú */
+#menuContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+#menuContainer.active {
+    transform: translateX(0);
+}
+
+#menuToggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4c8baf;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+#menuContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="color"] {
+    height: 10px;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

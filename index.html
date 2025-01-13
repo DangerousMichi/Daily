@@ -9,7 +9,7 @@
 <body>
 
     <div id="cont">
-        <h1>Daily</h1>
+        <p id="titt">Daily</p>
         <div id="main">
             <div id="buttonD">
                 <button id="addNotebook">+ Añadir Notebook</button>
@@ -18,19 +18,24 @@
             <div id="notebooksContainer">
                 <!-- Aquí se agregarán los notebooks dinámicamente -->
             </div>
-
-              
-    
-
         </div>    
-        <div id="editor" style="display:none;">
-        <textarea id="noteContent"></textarea>
-        <button id="saveNotebook">Guardar</button>
-        <button id="backToMain">Regresar</button>
-    </div>
-    </div>
-  
 
+        <div id="editor" style="display:none;">
+            <textarea id="noteContent"></textarea>
+            <button id="saveNotebook">Guardar</button>
+            <button id="backToMain">Regresar</button>
+        </div>
+    </div>
+
+    <div id="menuContainer">
+        <div id="menuToggle">☰</div>
+        <div id="menuContent">
+            <input type="color" id="defaultColor" value="#b6ecff">
+            <label for="defaultColor">Fondo</label>
+            <input type="color" id="defaultFontColor" value="#000000">
+            <label for="defaultFontColor">Fuente</label>
+        </div>
+    </div>
 
     <script src="funtion.js"></script>
 </body>
